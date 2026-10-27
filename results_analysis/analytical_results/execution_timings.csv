@@ -1,0 +1,8 @@
+﻿stage,seconds
+spark_start_seconds,19.7800
+spark_smoke_test_seconds,20.1200
+load_schema_seconds,3.5800
+profiling_seconds,293.4200
+clean_and_cache_seconds,126.3700
+ml_training_seconds,231.4200
+total_notebook_seconds,979.2900

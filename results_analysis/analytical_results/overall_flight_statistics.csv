@@ -1,0 +1,2 @@
+﻿total_flights,cancelled_flights,diverted_flights,flown_flights,dep_delay_observed_flights,arr_delay_observed_flights,cancellation_rate_pct,diversion_rate_pct,delayed_departure_rate_pct,delayed_arrival_rate_pct,avg_dep_delay_min,median_dep_delay_min,p90_dep_delay_min,p99_dep_delay_min,avg_arr_delay_min,median_arr_delay_min,p90_arr_delay_min,avg_distance_mi
+7079081,96315,17499,6982766,6982766,6965267,1.3606,0.2472,20.6385,20.8172,12.6451,-2.0000,44.0000,216.0000,7.0982,-6.0000,43.0000,834.2000

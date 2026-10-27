@@ -1,0 +1,16 @@
+﻿op_unique_carrier,carrier_name,flights,cancelled_flights,cancellation_rate_pct,carrier_reason,weather_reason,nas_reason,security_reason
+F9,Frontier Airlines,208624,4835,2.3200,2234,2601,0,0
+9E,Endeavor Air,200094,4608,2.3000,1209,1085,2314,0
+AS,Alaska Airlines,245819,4811,1.9600,4016,785,10,0
+NK,Spirit Airlines,261103,4998,1.9100,872,3801,323,2
+YX,Republic Airways,301465,5576,1.8500,609,2862,2105,0
+G4,Allegiant Air,117210,2018,1.7200,751,964,303,0
+OH,PSA Airlines,227971,3751,1.6500,383,3250,118,0
+UA,United Airlines,760451,12478,1.6400,8159,2794,1525,0
+AA,American Airlines,984306,15252,1.5500,1986,12899,367,0
+B6,JetBlue Airways,240282,3735,1.5500,774,1217,1744,0
+MQ,Envoy Air,279955,3985,1.4200,341,2692,952,0
+OO,SkyWest Airlines,744658,8527,1.1500,122,7707,696,2
+HA,Hawaiian Airlines,78530,822,1.0500,727,95,0,0
+DL,Delta Air Lines,1009194,9147,0.9100,6559,2451,137,0
+WN,Southwest Airlines,1419419,11772,0.8300,2184,8402,1186,0

@@ -1,0 +1,4 @@
+﻿variant,n,mean_min,median_min,p99_min
+All observed delays,6982766,12.6451,-2.0000,216.0000
+Excluding departures > 24 h,6982205,12.5042,-2.0000,215.0000
+Excluding departures > 12 h,6975091,11.5368,-2.0000,205.0000

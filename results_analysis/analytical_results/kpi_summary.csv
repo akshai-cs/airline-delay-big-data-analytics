@@ -1,0 +1,36 @@
+﻿kpi,value,unit,formula,missing_value_handling
+Total flight records,"7,079,081",flights,COUNT(*),All rows.
+Valid-record percentage,100.00,%,Rows with non-null date/carrier/origin/dest and valid outcome flags / total,No structurally invalid flight records; one invalid scheduled time is retained with a null derived hour.
+Duplicate records,0,records,Total rows - distinct rows across all 35 columns,No duplicates; no removal.
+Missing departure-delay rate,1.3133,%,NULL dep_delay / total rows,"Missing is unknown, not zero; cancelled/diverted flights are excluded from delay rates."
+Missing arrival-delay rate,1.6078,%,NULL arr_delay / total rows,"Missing is unknown, not zero."
+Overall cancellation rate,1.3606,%,Cancelled flights / total flights,All records in denominator.
+Overall diversion rate,0.2472,%,Diverted flights / total flights,All records in denominator.
+Delayed departure rate (flown),20.6385,%,dep_delay >= 15 / flown flights with observed dep_delay,Cancelled flights excluded; missing dep_delay excluded.
+Delayed arrival rate (valid),20.8172,%,"arr_delay >= 15 / non-cancelled, non-diverted flights with observed arr_delay",Cancelled and diverted flights excluded.
+Mean departure delay,12.6451,minutes,AVG(dep_delay) over valid departures,Negative values are early departures.
+Median departure delay,-2.00,minutes,Approx. 50th percentile of valid dep_delay,Robust to the long delay tail.
+P90 departure delay,44.00,minutes,Approx. 90th percentile of valid dep_delay,Tail indicator.
+P99 departure delay,216.00,minutes,Approx. 99th percentile of valid dep_delay,Extreme-tail indicator.
+Mean arrival delay,7.0982,minutes,AVG(arr_delay) over valid arrivals,Excludes cancelled and diverted.
+Median arrival delay,-6.00,minutes,Approx. 50th percentile of valid arr_delay,Robust central value.
+P90 arrival delay,43.00,minutes,Approx. 90th percentile of valid arr_delay,Tail indicator.
+Operating airlines,15,carriers,COUNT(DISTINCT op_unique_carrier),All 15 carriers retained.
+Origin airports,348,airports,COUNT(DISTINCT origin),All 348 retained.
+Observed routes,"6,805",routes,COUNT(DISTINCT origin-destination),Routes with at least one flight.
+Highest-volume airline,"WN - Southwest Airlines (1,419,419 flights; 20.05%)",text,Maximum COUNT(*) by carrier,Descriptive.
+Highest delayed-departure-rate airline (>=10k flights),F9 - Frontier Airlines (27.68%),text,"Maximum delayed rate with minimum 10,000 flights","Descriptive, not causal."
+Lowest delayed-departure-rate airline (>=10k flights),YX - Republic Airways (11.68%),text,"Minimum delayed rate with minimum 10,000 flights","Descriptive, not causal."
+Highest-volume origin airport,"ATL - Atlanta, GA (341,910 flights)",text,Maximum COUNT(*) by origin,Descriptive.
+Highest delayed-departure-rate airport (>=10k flights),"BWI - Baltimore, MD (28.57%)",text,"Maximum delayed rate with minimum 10,000 flights","Descriptive, not causal."
+Highest cancellation-rate airline,F9 (2.32%),text,Maximum cancelled / total by carrier,Descriptive.
+Busiest month by flights,"July (634,613 flights)",text,Maximum COUNT(*) by month,2024 calendar.
+Most-delayed month,July (29.49% delayed; mean 22.30 min),text,Maximum delayed rate by month,Descriptive.
+Top attributed delay cause,Late Aircraft (43.61% of attributed minutes),text,Maximum attributed minutes among delayed departures with cause data,Cause coverage 80.17%.
+Delay-cause coverage,80.17,%,Delayed departures with positive cause attribution / delayed departures,Missing causes are not zero.
+Extreme departure delays > 24 h,566,flights,COUNT(dep_delay > 1440),Retained and sensitivity-tested.
+ML model AUC,0.6884,score,Area under ROC on 20% hold-out,Leakage-safe features; random split.
+ML model positive-class precision,0.3060,score,TP / (TP + FP),Class-balanced weights; threshold 0.5.
+ML model positive-class recall,0.6702,score,TP / (TP + FN),Class-balanced weights; threshold 0.5.
+ML model positive-class F1,0.4202,score,Harmonic mean of precision and recall,Class-balanced weights; threshold 0.5.
+Majority-class baseline accuracy,0.7935,score,Share of negative-class flights in the hold-out set,Baseline F1 = 0 for delayed class.

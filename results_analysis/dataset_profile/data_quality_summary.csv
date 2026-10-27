@@ -1,0 +1,21 @@
+﻿check,value,severity,action
+Exact duplicate rows,0,High,No duplicates found; no rows removed.
+Invalid month,0,High,Retain and flag if any; none found.
+Invalid day of month,0,High,Retain and flag if any; none found.
+Invalid scheduled departure time,1,Medium,Set the derived scheduled-hour field to null for this record; do not drop the flight.
+Non-positive distance,0,High,Retain; none found for distance analysis.
+Negative taxi-out,0,Medium,Retain raw value; not used as a delay target.
+Negative taxi-in,0,Medium,Retain raw value.
+Negative air time,0,Medium,Retain raw value; not used as a delay target.
+Invalid cancelled flag,0,High,Retain and flag; none found.
+Invalid diverted flag,0,High,Retain and flag; none found.
+Cancelled flights with a recorded departure delay,3345,Low,Exclude cancelled flights from delay-rate denominators; do not treat as on-time.
+Flown flights with missing departure delay,0,High,Exclude from departure-delay metrics; never impute zero.
+Flown/non-diverted flights with missing arrival delay,0,High,Exclude from arrival-delay metrics; never impute zero.
+Departure delays > 12 hours,7707,Low,Retain; report mean/median and a sensitivity analysis excluding extremes.
+Departure delays > 24 hours,566,Low,Retain; extreme operational events are valid records.
+Arrival delays > 12 hours,7548,Low,Retain; report tail behaviour.
+Arrival delays > 24 hours,567,Low,Retain; report tail behaviour.
+Null scheduled elapsed time,1,Low,Exclude from elapsed-time calculations; not used as a primary delay KPI.
+Negative scheduled elapsed time,1,Medium,Exclude from elapsed-time calculations; retain the flight record.
+Delayed departures with cause data,1155299,Low,Cause analysis is restricted to this subset; missing cause values are not treated as zero cause.

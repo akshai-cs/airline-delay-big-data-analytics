@@ -1,0 +1,8 @@
+﻿day_of_week,day_name,flights,avg_dep_delay_min,delayed_departure_rate_pct,cancellation_rate_pct
+1,Monday,1073959,12.7000,20.6000,1.3700
+2,Tuesday,976073,10.4300,17.7000,1.2800
+3,Wednesday,973179,10.3800,18.0900,1.2500
+4,Thursday,1041956,13.1300,21.3500,1.4500
+5,Friday,1055419,14.6300,22.9800,1.5200
+6,Saturday,911515,12.5600,20.6300,1.2000
+7,Sunday,1046980,14.3600,22.7400,1.4300

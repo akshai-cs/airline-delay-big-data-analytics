@@ -1,0 +1,5 @@
+﻿actual,predicted,count
+Not delayed,Not delayed,669962
+Not delayed,Delayed,438423
+Delayed,Not delayed,95126
+Delayed,Delayed,193317

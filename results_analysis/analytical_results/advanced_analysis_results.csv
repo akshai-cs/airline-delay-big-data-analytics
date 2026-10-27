@@ -1,0 +1,25 @@
+﻿analysis,entity,metric,value,notes
+Delay prediction (Spark MLlib logistic regression),Majority baseline,accuracy,0.7935,20% hold-out; target dep_delay>=15; leakage-safe features
+Delay prediction (Spark MLlib logistic regression),Majority baseline,precision,0.0000,20% hold-out; target dep_delay>=15; leakage-safe features
+Delay prediction (Spark MLlib logistic regression),Majority baseline,recall,0.0000,20% hold-out; target dep_delay>=15; leakage-safe features
+Delay prediction (Spark MLlib logistic regression),Majority baseline,f1,0.0000,20% hold-out; target dep_delay>=15; leakage-safe features
+Delay prediction (Spark MLlib logistic regression),Majority baseline,auc,0.5000,20% hold-out; target dep_delay>=15; leakage-safe features
+Delay prediction (Spark MLlib logistic regression),Logistic regression,accuracy,0.6180,20% hold-out; target dep_delay>=15; leakage-safe features
+Delay prediction (Spark MLlib logistic regression),Logistic regression,precision,0.3060,20% hold-out; target dep_delay>=15; leakage-safe features
+Delay prediction (Spark MLlib logistic regression),Logistic regression,recall,0.6702,20% hold-out; target dep_delay>=15; leakage-safe features
+Delay prediction (Spark MLlib logistic regression),Logistic regression,f1,0.4202,20% hold-out; target dep_delay>=15; leakage-safe features
+Delay prediction (Spark MLlib logistic regression),Logistic regression,auc,0.6884,20% hold-out; target dep_delay>=15; leakage-safe features
+Confusion matrix,Not delayed -> Not delayed,count,669962.0000,Hold-out test set
+Confusion matrix,Not delayed -> Delayed,count,438423.0000,Hold-out test set
+Confusion matrix,Delayed -> Not delayed,count,95126.0000,Hold-out test set
+Confusion matrix,Delayed -> Delayed,count,193317.0000,Hold-out test set
+Delay-risk distribution,On-time / early (<15 min),flights,5541627.0000,share_pct=79.3615; p90_dep_delay=6.0
+Delay-risk distribution,Minor (15-29 min),flights,489989.0000,share_pct=7.0171; p90_dep_delay=27.0
+Delay-risk distribution,Moderate (30-59 min),flights,434972.0000,share_pct=6.2292; p90_dep_delay=55.0
+Delay-risk distribution,Severe (60-119 min),flights,307679.0000,share_pct=4.4063; p90_dep_delay=109.0
+Delay-risk distribution,Extreme (120+ min),flights,208499.0000,share_pct=2.9859; p90_dep_delay=389.0
+Volume-delay association,Airline,pearson_r,0.1594,groups=15; p_value=0.5705
+Volume-delay association,Origin airport,pearson_r,0.5169,groups=101; p_value=0.0
+Extreme-delay sensitivity,All observed delays,mean_dep_delay_min,12.6451,n=6982766; median=-2.0; p99=216.0
+Extreme-delay sensitivity,Excluding departures > 24 h,mean_dep_delay_min,12.5042,n=6982205; median=-2.0; p99=215.0
+Extreme-delay sensitivity,Excluding departures > 12 h,mean_dep_delay_min,11.5368,n=6975091; median=-2.0; p99=205.0

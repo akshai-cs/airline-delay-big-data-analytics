@@ -1,0 +1,11 @@
+﻿.venv/
+.git/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+*.log
+dataset.zip
+flight_data_2024.csv

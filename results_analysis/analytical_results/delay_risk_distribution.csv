@@ -1,0 +1,6 @@
+﻿delay_risk,flights,share_pct,avg_dep_delay_min,p90_dep_delay_min
+On-time / early (<15 min),5541627,79.3615,-2.8700,6.0000
+Minor (15-29 min),489989,7.0171,21.1200,27.0000
+Moderate (30-59 min),434972,6.2292,42.2300,55.0000
+Severe (60-119 min),307679,4.4063,83.6700,109.0000
+Extreme (120+ min),208499,2.9859,238.6200,389.0000

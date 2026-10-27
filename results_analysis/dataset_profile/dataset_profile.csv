@@ -1,0 +1,36 @@
+﻿column_name,data_type,role,description,null_count,null_percentage,example_value
+year,int,date,Flight year (constant 2024 in this file).,0,0.0000,2024
+month,int,date,Month number (1-12).,0,0.0000,1
+day_of_month,int,date,Day of month (1-31).,0,0.0000,1
+day_of_week,int,date,BTS day-of-week code (1=Monday ... 7=Sunday).,0,0.0000,1
+fl_date,date,date,Scheduled flight date.,0,0.0000,2024-01-01
+op_unique_carrier,string,airline,Reporting/operating carrier code.,0,0.0000,9E
+op_carrier_fl_num,double,identifier,Operating carrier flight number.,1,0.0000,4814.0
+origin,string,airport,Origin airport IATA code.,0,0.0000,JFK
+origin_city_name,string,airport,Origin city and state name.,0,0.0000,"New York, NY"
+origin_state_nm,string,airport,Origin state name.,0,0.0000,New York
+dest,string,airport,Destination airport IATA code.,0,0.0000,DTW
+dest_city_name,string,airport,Destination city and state name.,0,0.0000,"Detroit, MI"
+dest_state_nm,string,airport,Destination state name.,0,0.0000,Michigan
+crs_dep_time,int,time,Scheduled local departure time in HHMM integer form.,0,0.0000,1252
+dep_time,double,time,Actual local departure time in HHMM numeric form.,92659,1.3089,1247.0
+dep_delay,double,delay,Departure delay in minutes; negative means early.,92970,1.3133,-5.0
+taxi_out,double,operational,Taxi-out time in minutes.,95734,1.3524,31.0
+wheels_off,double,time,Wheels-off local time in HHMM numeric form.,95734,1.3524,1318.0
+wheels_on,double,time,Wheels-on local time in HHMM numeric form.,97856,1.3823,1442.0
+taxi_in,double,operational,Taxi-in time in minutes.,97856,1.3823,7.0
+crs_arr_time,int,time,Scheduled local arrival time in HHMM integer form.,0,0.0000,1508
+arr_time,double,time,Actual local arrival time in HHMM numeric form.,97854,1.3823,1449.0
+arr_delay,double,delay,Arrival delay in minutes; negative means early.,113814,1.6078,-19.0
+cancelled,int,outcome,"Cancellation indicator (1=cancelled, 0=not cancelled).",0,0.0000,0
+cancellation_code,string,outcome,Cancellation reason code A/B/C/D when cancelled.,6982766,98.6394,
+diverted,int,outcome,"Diversion indicator (1=diverted, 0=not diverted).",0,0.0000,0
+crs_elapsed_time,double,operational,Scheduled elapsed flight time in minutes.,1,0.0000,136.0
+actual_elapsed_time,double,operational,Actual elapsed flight time in minutes.,113814,1.6078,122.0
+air_time,double,operational,Time in the air in minutes.,113814,1.6078,84.0
+distance,double,operational,Great-circle distance between airports in miles.,0,0.0000,509.0
+carrier_delay,int,delay_cause,Minutes attributed to carrier-related delay.,0,0.0000,0
+weather_delay,int,delay_cause,Minutes attributed to extreme weather delay.,0,0.0000,0
+nas_delay,int,delay_cause,Minutes attributed to National Airspace System delay.,0,0.0000,0
+security_delay,int,delay_cause,Minutes attributed to security delay.,0,0.0000,0
+late_aircraft_delay,int,delay_cause,Minutes attributed to a late inbound aircraft.,0,0.0000,0
